@@ -6,6 +6,9 @@
 - they are a variety of applications running 
 
 ## Enumeration
+- there are a number of tools for enumerating web applications
+- some of them are listed here, but there are probably more
+
   ### Nikto
     - nikto -host [ip]
     - great general tool to start scanning web application
