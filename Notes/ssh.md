@@ -1,5 +1,6 @@
 
 # ssh
+- **normally on port 22**
 - basically hope that it's an old outdated version
   - look for outdated vulns with searchsploit or google
 - could use nmap to look at the algorithms
