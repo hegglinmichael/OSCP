@@ -1,5 +1,6 @@
 
 # ftp
+- **normally on port 21**
 - look around at all the files
 - look at what directory you are in
 - try to download files and look at them
