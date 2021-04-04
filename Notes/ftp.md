@@ -7,6 +7,9 @@
 - try to upload shell code that could be used for an attack
 - remember to mess with the settings (ie put in passive mode, etc)
 
+## What is it?
+- it's a file transfer protocol
+
 ## information gathering
 - nc -nv [ip] [port]
   - this could grap the version of ftp being used
