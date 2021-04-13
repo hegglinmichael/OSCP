@@ -30,6 +30,27 @@
     
   ### gobuster
     - **Note: you need wordlists for this**
+    - gobuster -dir -u http://[ip] -w [you're word list] -s '[responses you want, ie 200, 300, 204, etc]' -e
+    - great for using large wordlists that you can find online
+      - I recommend SecLists
+    - can filter out responses you want as well which can be very helpful
+    
+  ### wfuzz
+    - wfuzz --hc 404 -c -w [wordlist] -u http://[ip]/FUZZ
+    - the above can filter out respones (specifically 404 in this case)
+    - tries to fuzz on specific path where you put "FUZZ" in url path
+ 
+
+
+
+
+
+
+
+
+
+
+
 
 
 
