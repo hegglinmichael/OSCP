@@ -1,0 +1,43 @@
+
+# Buffer Overflow Notes
++ jail example included in "Example Code"
+  + helpful link for performing it: https://reboare.github.io/htb/htb-jail.html
+  + another more helpful link: https://www.hackingarticles.in/hack-the-box-challenge-jail-walkthrough/
+
+## GDB Commands
++ enter GDB
++ $> gdb [binary file]
++
++ The below commands make gdb follow the forked processes in the program
++ $> set follow-fork-mode child
++ $> set detach-on-fork off
++
++ to view the registers
++ $> i r
++
+
+## Registers
++ EBP: points to the base of the stack, this is your reference
++ EIP: points to the address of the next instruction to read
+  + to get the EIP, send a string of unique characters [look at gdb command for this]
+  + once you see a certain group of characters inside the EIP you can search for the characters in the original string [once again, look at gdb command for this]
++ ESP: points to where you are now on the stack
+  + you can use a debugger
+
+## Common Problems
++ some strings will make the exploit fail.  To solve this, you send a string with all characters.  You slowly remove characters until you have a good string.  
++ shell code cannot contain bad characters
++ remember there is big and little endien, this can make things difficult
+
+## Generating an attack in python
++ first you need to create a seg fault by generating a pattern with the python code, then seeing the registers overwritten
+  + this can also help determine endianness.  Little endian is where the values you see overwritten are reverse.  So if you overwrite the register with input string "abcd", then the hex value found after the program crashes will equal "dcba"
++ NOTE: an example of this is in the Jail example, it has nice comments, and should be used as an example
++ Libraries:
+  + from pwn import *
+  + import struct
+
+
+
+
+
