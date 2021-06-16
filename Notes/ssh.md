@@ -9,5 +9,7 @@
 - nc -nv [ip] [port]
   - could get the ssh version
 
+## Misc.
+- sometimes you must specify the type of algorithm used to communicate
 
 

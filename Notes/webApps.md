@@ -13,6 +13,8 @@
     - look at paths that have logins, or seem like they are only meant for restricted access
     - look at the headers defined in the user requests, and confidential info that may be in reponses
     - these tools only work well if you have good wordlists.  I recommend using SecList for oscp
+    - look for setting files once a low level shell is obtained, could have creds for databases or users
+    - use webappalyzer and look up all website infra
 
   ### Burpsuite
     - use burpsutie to look at requests and reponses
@@ -41,7 +43,21 @@
     - tries to fuzz on specific path where you put "FUZZ" in url path
  
 
+## Wordpress
+* wpscan --url http://[ip] -P /usr/share/wordlists/rockyou.txt --username sean
 
+
+## JWT
+* in some cases, a jwt can be modified to get root priveliges.  Make sure to look in burp
+
+## sqlmap for login injections
+* EX: sqlmap -u http://10.10.10.230:80/login --data="login=iron&password=man" --method POST --dbs --batch
+* will need burp to look up request params
+
+# Links Table
+
+| Description | Link |
+| Reverse Shell through Wordpress plugin upload | https://sevenlayers.com/index.php/179-wordpress-plugin-reverse-shell |
 
 
 

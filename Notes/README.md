@@ -22,12 +22,15 @@
 ## Reverse Shell
 - https://netsec.ws/?p=331
 
+## One Liners
+- python -c "import pty;pty.spawn('/bin/bash')"
+
 ## Helpful Kali Paths
 - /usr/share/wordlists/rockyou.txt
 - /usr/share/nmap/scripts
 - /usr/share/dirb/wordlists/common.txt
-
-
+- /usr/share/webshells/
+- /home/kali/HTB/useful_scripts
 
 
 
