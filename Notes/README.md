@@ -32,7 +32,8 @@
 - /usr/share/webshells/
 - /home/kali/HTB/useful_scripts
 
-
+## Misc
++ good tool for ciphers: http://rumkin.com/tools/cipher/
 
 
 
