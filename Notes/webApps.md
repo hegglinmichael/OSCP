@@ -36,16 +36,20 @@
     - great for using large wordlists that you can find online
       - I recommend SecLists
     - can filter out responses you want as well which can be very helpful
+    - for kali
+      - gobuster dir -u [ip] -w /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt -x php,txt,cnf,conf -k
     
   ### wfuzz
     - wfuzz --hc 404 -c -w [wordlist] -u http://[ip]/FUZZ
     - the above can filter out respones (specifically 404 in this case)
     - tries to fuzz on specific path where you put "FUZZ" in url path
+## Subdomain Enumeration
+* gobuster dns -d schooled.htb -w /usr/share/seclists/Discovery/Web-Content/raft-small-words.txt -i
  
 
 ## Wordpress
 * wpscan --url http://[ip] -P /usr/share/wordlists/rockyou.txt --username sean
-
+* look at the common path for plugins: /wp-content/plugins
 
 ## JWT
 * in some cases, a jwt can be modified to get root priveliges.  Make sure to look in burp
