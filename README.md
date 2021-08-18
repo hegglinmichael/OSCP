@@ -15,6 +15,7 @@ to help someone get up to speed faster on the tools and protocols.
 - ftp
 - ssh
 - smb
+- ldap
 - ipp cups
 - databases
 - web applications
