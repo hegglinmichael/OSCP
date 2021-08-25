@@ -31,6 +31,7 @@
 - /usr/share/dirb/wordlists/common.txt
 - /usr/share/webshells/
 - /home/kali/HTB/useful_scripts
+- /usr/share/windows-resources/binaries/nc.exe
 
 ## Misc
 + good tool for ciphers: http://rumkin.com/tools/cipher/

@@ -4,6 +4,13 @@
   + helpful link for performing it: https://reboare.github.io/htb/htb-jail.html
   + another more helpful link: https://www.hackingarticles.in/hack-the-box-challenge-jail-walkthrough/
 
++ Check memory protections
+  + cat /proc/sys/kernel/randomize_va_space
+  + checksec --file=[file]
+
+  + ldd [binary] | grep libc
+  
+
 ## GDB Commands
 + enter GDB
 + $> gdb [binary file]
