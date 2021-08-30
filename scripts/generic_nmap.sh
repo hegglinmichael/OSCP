@@ -37,6 +37,13 @@ ports=$(echo $ports | awk -F "Nmap done" '{print $1}')
 ports=$(echo $ports | tr '\n' ' ' | sed -e 's/[^0-9]/ /g' -e 's/^ *//g' -e 's/ *$//g' | tr -s ' ' | sed 's/ /,/g')
 echo "$ports"
 
+
+echo "==================================="
+echo "=     nmap vuln script scan "
+echo "=     nmap --script vuln -A $1"
+echo "==================================="
+sudo nmap --script vuln -A $1
+
 echo "==================================="
 echo "= 	More Intrusive Scan	 "
 echo "= 	nmap -sV -T4 $1 -p $ports"
