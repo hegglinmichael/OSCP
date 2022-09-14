@@ -26,6 +26,10 @@
 - ftp$> put [file]
   - put your own file onto the server (**This could be shell code**)
 
+# enumeration
+* nmap --script ftp-vuln* [ip] -p [ports]
+* nmap --script ftp-enum* [ip] -p [ports]
+
 ## connection with ssl certificate
 
 

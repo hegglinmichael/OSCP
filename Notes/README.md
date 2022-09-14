@@ -32,6 +32,7 @@
 - /usr/share/webshells/
 - /home/kali/HTB/useful_scripts
 - /usr/share/windows-resources/binaries/nc.exe
+- /usr/share/metasploit-framework/data/wordlists/unix_users.txt
 
 ## Misc
 + good tool for ciphers: http://rumkin.com/tools/cipher/

@@ -11,5 +11,5 @@
 
 ## Misc.
 - sometimes you must specify the type of algorithm used to communicate
-
+- ssh -t [user]@[ip] bash --norc --noprofile
 
