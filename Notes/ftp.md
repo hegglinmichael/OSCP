@@ -15,6 +15,7 @@
   - this could grap the version of ftp being used
 - openssl s_client -connect [ip]:[port] -starttls ftp
   - grabs the ftp certificate
+- Download all files: `wget -m --no-passive ftp://anonymous:anonymous@10.129.14.136`
 
 ## simple ftp cmd
 - $> ftp [ip]
